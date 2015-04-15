@@ -8,7 +8,7 @@ var startPlayer = {
 	clickPower: 1,
 	proofs: 0,
 	proofsPerSecond: 0,
-	costPerProof: 5,
+	costPerProof: 50,
 	deriv1Money: 0.05,
 	
 	/* main buildings: indexes
