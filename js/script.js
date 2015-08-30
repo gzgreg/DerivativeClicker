@@ -14,6 +14,7 @@ window.onblur = function(){isActive=false;};
 function addMoney(money) {
 	player.money = Math.round((player.money + money)*100)/100;
 	if(money > 0){
+		money = money * (1 + (player.infiniCurr/10));
 		player.totalMoneyEarned = Math.round((player.totalMoneyEarned + money)*100)/100;
 	}
 	if(player.money < 0) player.money = 0;
