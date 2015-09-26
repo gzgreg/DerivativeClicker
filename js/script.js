@@ -285,6 +285,7 @@ function reset(tier) {
 					}
 				}
 			}
+			player.clickPower = player.infiniCurr;
 			updateAll();
 			
 			ga('send', 'event', 'reset', 'click', 'reset'); //analytics
@@ -301,7 +302,6 @@ function infiniReset(){
 	
 	$.extend(true, player, deepObjCopy(infiniResetPlayer));
 	player.infiniCurr++;
-	
 	for(i = 1; i <= numTiers; i++){
 		calcMult(i);
 	}
