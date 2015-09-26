@@ -14,7 +14,6 @@ window.onblur = function(){isActive=false;};
 function addMoney(money) {
 	player.money = Math.round((player.money + money)*100)/100;
 	if(money > 0){
-		money = money * (1 + (player.infiniCurr/10));
 		player.totalMoneyEarned = Math.round((player.totalMoneyEarned + money)*100)/100;
 	}
 	if(player.money < 0) player.money = 0;
@@ -59,7 +58,8 @@ function displayNum(num, ifMoney){
 //function that recalculates the multipliers associated with upgrades
 function calcMult(mult){
 	var index = mult - 1;
-	calcMult.factors = [0.0005, 0.002, 0.005, 0.01, 0.02, 0.04, 0.06];
+	
+	calcMult.factors = [(player.infiniCurr/10000) + 0.0005, (player.infiniCurr/1000) + 0.002, (player.infiniCurr/1000) + 0.005, (player.infiniCurr/100) + 0.01, (player.infiniCurr/100) + 0.02, (player.infiniCurr/100) + 0.04, (player.infiniCurr/100) + 0.06];
 	var totalBuildings = 0;
 	
 	for(var i = mult*5 - 5; i < mult*5; i++){
