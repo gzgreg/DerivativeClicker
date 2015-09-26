@@ -157,7 +157,6 @@ function save() {
 	var d = new Date();
 	$("#lastSave").html(d.toLocaleTimeString());
 	
-	ga('send', 'event', 'save', 'click', 'save'); //analytics
 }
 
 function load() {
